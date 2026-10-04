@@ -82,8 +82,8 @@ a { color: inherit; }
 }
 .wordmark .dot { color: var(--accent); }
 .wordmark .llc {
-  font-family: "IBM Plex Mono", monospace; font-weight: 500; font-size: .68rem;
-  letter-spacing: .12em; color: var(--ink-soft);
+  font-family: "Sora", sans-serif; font-weight: 700; font-size: inherit;
+  letter-spacing: inherit; color: var(--accent);
 }
 .tabs {
   display: flex; gap: 4px; list-style: none;
