@@ -3,339 +3,212 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mind of Mart — Apps built with care</title>
-<meta name="description" content="Mind of Mart is an independent software company. Our first app is available now on the App Store and Google Play.">
+<title>Mind of Mart LLC — Independent software studio</title>
+<meta name="description" content="Mind of Mart LLC is an independent software studio. Our first release is Mac's Sports Playground, with more products on the way.">
+<meta property="og:title" content="Mind of Mart LLC">
+<meta property="og:description" content="An independent software studio. Our first release is Mac's Sports Playground, with more products on the way.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mindofmart.com/">
+<link rel="canonical" href="https://mindofmart.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --mist: #F2F5F9;
-    --ink: #101C2E;
-    --ink-soft: #45536B;
-    --cobalt: #2E5BFF;
-    --cobalt-deep: #1E42C8;
-    --cloud: #DCE6FF;
-    --amber: #FFB86B;
-    --white: #FFFFFF;
-    --radius: 18px;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--mist);
-    color: var(--ink);
-    font-family: "IBM Plex Sans", system-ui, sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .wrap {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  /* ---------- Header ---------- */
-  header {
-    padding: 28px 0;
-  }
-  header .wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .wordmark {
-    font-family: "Sora", sans-serif;
-    font-weight: 700;
-    font-size: 1.15rem;
-    letter-spacing: -0.01em;
-    color: var(--ink);
-    text-decoration: none;
-  }
-  .wordmark .dot { color: var(--cobalt); }
-  .contact-link {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.85rem;
-    color: var(--ink-soft);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: color .2s, border-color .2s;
-  }
-  .contact-link:hover, .contact-link:focus-visible {
-    color: var(--cobalt);
-    border-color: var(--cobalt);
-  }
-
-  /* ---------- Hero ---------- */
-  .hero .wrap {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 48px;
-    align-items: center;
-    padding-top: 48px;
-    padding-bottom: 80px;
-  }
-
-  .eyebrow {
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.78rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--cobalt);
-    margin-bottom: 18px;
-  }
-
-  h1 {
-    font-family: "Sora", sans-serif;
-    font-weight: 700;
-    font-size: clamp(2.2rem, 5vw, 3.4rem);
-    line-height: 1.12;
-    letter-spacing: -0.025em;
-    margin-bottom: 20px;
-  }
-  h1 em {
-    font-style: normal;
-    color: var(--cobalt);
-  }
-
-  .lede {
-    color: var(--ink-soft);
-    font-size: 1.08rem;
-    max-width: 46ch;
-    margin-bottom: 32px;
-  }
-
-  /* Store buttons */
-  .stores { display: flex; gap: 14px; flex-wrap: wrap; }
-  .store-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--ink);
-    color: var(--white);
-    text-decoration: none;
-    padding: 12px 22px 12px 18px;
-    border-radius: 14px;
-    transition: transform .18s ease, background .18s ease;
-  }
-  .store-btn:hover, .store-btn:focus-visible { background: var(--cobalt-deep); transform: translateY(-2px); }
-  .store-btn svg { width: 26px; height: 26px; flex-shrink: 0; }
-  .store-btn .txt { display: flex; flex-direction: column; line-height: 1.2; text-align: left; }
-  .store-btn .small { font-size: 0.68rem; opacity: .75; letter-spacing: .04em; }
-  .store-btn .big { font-family: "Sora", sans-serif; font-weight: 600; font-size: 1rem; }
-
-  /* ---------- Phone mockup ---------- */
-  .phone-stage {
-    display: flex;
-    justify-content: center;
-    perspective: 1200px;
-  }
-  .phone {
-    width: 250px;
-    height: 510px;
-    background: var(--ink);
-    border-radius: 40px;
-    padding: 12px;
-    box-shadow:
-      0 30px 60px -20px rgba(16, 28, 46, 0.35),
-      0 10px 24px -12px rgba(46, 91, 255, 0.25);
-    transform: rotate(4deg);
-    animation: float 7s ease-in-out infinite;
-  }
-  @keyframes float {
-    0%, 100% { transform: rotate(4deg) translateY(0); }
-    50%      { transform: rotate(4deg) translateY(-12px); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .phone { animation: none; }
-    html { scroll-behavior: auto; }
-  }
-  .screen {
-    width: 100%;
-    height: 100%;
-    background: var(--white);
-    border-radius: 30px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .screen .bar {
-    height: 54px;
-    background: var(--cobalt);
-    display: flex;
-    align-items: center;
-    padding: 0 18px;
-  }
-  .screen .bar .pill {
-    width: 90px; height: 10px; border-radius: 5px;
-    background: rgba(255,255,255,.85);
-  }
-  .screen .body { padding: 18px; display: flex; flex-direction: column; gap: 14px; }
-  .card {
-    border-radius: 14px;
-    background: var(--cloud);
-    height: 74px;
-    padding: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-  }
-  .card.hi { background: var(--amber); }
-  .card .line { height: 9px; border-radius: 5px; background: rgba(16,28,46,.28); width: 70%; }
-  .card .line.short { width: 42%; }
-
-  /* ---------- Product section ---------- */
-  .product {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 56px 0;
-  }
-  .product .wrap { max-width: 880px; }
-  .product h2 {
-    font-family: "Sora", sans-serif;
-    font-weight: 600;
-    font-size: 1.7rem;
-    letter-spacing: -0.02em;
-    margin-bottom: 14px;
-  }
-  .product > .wrap > p {
-    color: var(--ink-soft);
-    max-width: 62ch;
-    margin-bottom: 36px;
-  }
-  .features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-  }
-  .feature h3 {
-    font-family: "Sora", sans-serif;
-    font-weight: 600;
-    font-size: 1.02rem;
-    margin-bottom: 6px;
-  }
-  .feature .tick {
-    display: inline-block;
-    width: 10px; height: 10px;
-    border-radius: 3px;
-    background: var(--cobalt);
-    margin-right: 8px;
-  }
-  .feature p { color: var(--ink-soft); font-size: 0.95rem; }
-
-  /* ---------- Footer ---------- */
-  footer {
-    padding: 48px 0 40px;
-  }
-  footer .wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    color: var(--ink-soft);
-    font-size: 0.9rem;
-  }
-  footer a { color: var(--cobalt); text-decoration: none; }
-  footer a:hover, footer a:focus-visible { text-decoration: underline; }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 820px) {
-    .hero .wrap { grid-template-columns: 1fr; padding-bottom: 56px; }
-    .phone-stage { order: -1; margin-bottom: 8px; }
-    .phone { width: 210px; height: 430px; }
-    .features { grid-template-columns: 1fr; }
-  }
-
-  :focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; }
-</style>
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<header>
+<header class="site-header">
   <div class="wrap">
-    <a class="wordmark" href="/">Mind of Mart<span class="dot">.</span></a>
-    <!-- Once your Zoho mailbox is live, this address will just work -->
-    <a class="contact-link" href="mailto:hello@mindofmart.com">hello@mindofmart.com</a>
+    <a class="wordmark" href="/">Mind of Mart<span class="dot">.</span><span class="llc">LLC</span></a>
+    <nav aria-label="Main">
+      <ul class="tabs">
+        <li><a href="/" aria-current="page">Studio</a></li>
+        <li><a href="/sports-playground/">Mac's Sports Playground</a></li>
+        <li><a href="/press/">Press &amp; Partners</a></li>
+        <li><a href="https://macletics.com/support.html">Support</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <main>
+
   <section class="hero">
     <div class="wrap">
       <div>
         <p class="eyebrow">Independent software studio</p>
-        <!-- EDIT: swap "Your App" for the real app name -->
-        <h1>Meet <em>Your App</em> — built by Mind&nbsp;of&nbsp;Mart.</h1>
-        <p class="lede">
-          <!-- EDIT: one honest sentence about what the app does and who it's for -->
-          A simple, fast app that does one thing well. Available today for iPhone and Android.
-        </p>
-        <div class="stores">
-          <!-- EDIT: replace href with your App Store link -->
-          <a class="store-btn" href="#" aria-label="Download on the App Store">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            <span class="txt"><span class="small">Download on the</span><span class="big">App Store</span></span>
-          </a>
-          <!-- EDIT: replace href with your Google Play link -->
-          <a class="store-btn" href="#" aria-label="Get it on Google Play">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.25-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27m3.35-4.31c.34.27.59.68.59 1.19s-.22.9-.57 1.18l-2.29 1.32-2.5-2.5 2.5-2.5 2.27 1.31M6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/></svg>
-            <span class="txt"><span class="small">Get it on</span><span class="big">Google Play</span></span>
-          </a>
+        <h1>Useful apps, built carefully, one at a time.</h1>
+        <p class="lede">Mind of Mart LLC designs and builds consumer software. Our first release is Mac's Sports Playground, a sports prediction and analysis app. More products are on the way.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/sports-playground/">See Mac's Sports Playground</a>
+          <a class="btn btn-ghost" href="#lineup">Our line-up</a>
         </div>
       </div>
 
-      <div class="phone-stage" aria-hidden="true">
-        <div class="phone">
-          <div class="screen">
-            <div class="bar"><div class="pill"></div></div>
-            <div class="body">
-              <div class="card hi"><div class="line"></div><div class="line short"></div></div>
-              <div class="card"><div class="line"></div><div class="line short"></div></div>
-              <div class="card"><div class="line short"></div></div>
-              <div class="card"><div class="line"></div><div class="line short"></div></div>
+      <div class="lineup-index" aria-label="Product line-up at a glance">
+        <p class="label">The line-up</p>
+        <a href="/sports-playground/">
+          <span>
+            <span class="name">Mac's Sports Playground</span><br>
+            <span class="sub">Sports prediction &amp; analysis</span>
+          </span>
+          <span class="chip live">Launching</span>
+        </a>
+        <div class="row">
+          <span>
+            <span class="name">Next product</span><br>
+            <span class="sub">In development</span>
+          </span>
+          <span class="chip">Coming soon</span>
+        </div>
+        <div class="row">
+          <span>
+            <span class="name">And after that</span><br>
+            <span class="sub">On the drawing board</span>
+          </span>
+          <span class="chip">Coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lineup">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Products</p>
+        <h2>The line-up</h2>
+        <p class="muted">Each product gets its own home and its own team focus. Here's what's out and what's next.</p>
+      </div>
+
+      <div class="lineup">
+        <article class="featured product-panel">
+          <div class="copy">
+            <p class="eyebrow">By Macletics · a Mind of Mart LLC division</p>
+            <h2>Mac's Sports Playground</h2>
+            <p>Build your own pick system and prove it against history. Write the recipe your picks must match, backtest it across past seasons, and let your locker find picks every day. Plus an AI Buddy that knows the numbers.</p>
+            <p>NFL, NBA, MLB, NHL and college, with soccer coming soon.</p>
+            <div class="actions">
+              <a class="btn btn-amber" href="/sports-playground/">Explore the app</a>
+              <a class="btn btn-line" href="https://macletics.com/">Visit macletics.com ↗</a>
             </div>
           </div>
+          <div class="shots" aria-hidden="true">
+            <div class="phone"><img src="/img/app/dashboard.jpg" alt="" width="600" height="1044" loading="lazy"></div>
+            <div class="phone"><img src="/img/app/build-rules.jpg" alt="" width="600" height="1044" loading="lazy"></div>
+          </div>
+        </article>
+
+        <article class="soon-card">
+          <div class="glyph" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </div>
+          <span class="chip" style="justify-self:start">Coming soon</span>
+          <h3>Next from the studio</h3>
+          <p>Our second product is in development. We'll share more when it's ready to show.</p>
+        </article>
+
+        <article class="soon-card">
+          <div class="glyph" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </div>
+          <span class="chip" style="justify-self:start">Coming soon</span>
+          <h3>More on the way</h3>
+          <p>We're planning further apps for the line-up. Watch this page for launches.</p>
+        </article>
+
+        <article class="soon-card">
+          <div class="glyph" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+          </div>
+          <h3>Hear about launches first</h3>
+          <p>Email us and we'll let you know when the next product is ready.</p>
+          <a class="btn btn-ghost" style="justify-self:start" href="mailto:support@macletics.com?subject=Mind%20of%20Mart%20launch%20updates">Get launch updates</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How we work</p>
+        <h2>What every Mind of Mart product shares</h2>
+      </div>
+      <div class="principles">
+        <div>
+          <h3>Real data, shown plainly</h3>
+          <p>We build on real numbers and show where they come from. No made-up stats and no guesswork dressed up as insight.</p>
+        </div>
+        <div>
+          <h3>You stay in control</h3>
+          <p>Clear terms, a published privacy policy, and a way to delete your account from inside the app whenever you choose.</p>
+        </div>
+        <div>
+          <h3>Small team, real support</h3>
+          <p>We're an independent studio. When you write to us, the people who build the product read it.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="product">
-    <div class="wrap">
-      <h2>What it does</h2>
-      <p>
-        <!-- EDIT: a short honest paragraph about the app. Two or three sentences is plenty. -->
-        Describe the problem your app solves in plain words. Say who it's for and why it's better than the workaround they're using today.
-      </p>
-      <div class="features">
-        <div class="feature">
-          <h3><span class="tick"></span>Fast</h3>
-          <p><!-- EDIT -->Opens instantly and stays out of your way.</p>
+  <section>
+    <div class="wrap split">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow">Press &amp; partners</p>
+        <h2>Working on a story or a partnership?</h2>
+        <p class="muted">Company facts, product details and the right contact for media, partnership and business inquiries are all on one page.</p>
+        <div class="actions" style="margin-top:8px">
+          <a class="btn btn-primary" href="/press/">Press &amp; Partners</a>
         </div>
-        <div class="feature">
-          <h3><span class="tick"></span>Private</h3>
-          <p><!-- EDIT -->Your data stays on your device unless you say otherwise.</p>
-        </div>
-        <div class="feature">
-          <h3><span class="tick"></span>Simple</h3>
-          <p><!-- EDIT -->No accounts, no clutter — just the thing you came to do.</p>
-        </div>
+      </div>
+      <div class="card">
+        <ul class="contact-list">
+          <li><span>App help &amp; account questions</span><a href="mailto:support@macletics.com">support@macletics.com</a></li>
+          <li><span>Press &amp; media</span><a href="mailto:support@macletics.com?subject=Press%20inquiry">Email us</a></li>
+          <li><span>Partnerships &amp; business</span><a href="mailto:support@macletics.com?subject=Partnership%20inquiry">Email us</a></li>
+        </ul>
       </div>
     </div>
   </section>
+
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <span>© 2026 Mind of Mart</span>
-    <span><a href="mailto:hello@mindofmart.com">hello@mindofmart.com</a></span>
+    <div class="cols">
+      <div class="about">
+        <a class="wordmark" href="/">Mind of Mart<span class="dot">.</span><span class="llc">LLC</span></a>
+        <p>An independent software studio. Home of Macletics and Mac's Sports Playground.</p>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="/sports-playground/">Mac's Sports Playground</a></li>
+          <li><a href="/#lineup">Coming soon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/press/">Press &amp; Partners</a></li>
+          <li><a href="mailto:support@macletics.com">Contact</a></li>
+          <li><a href="https://macletics.com/support.html">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="https://macletics.com/terms">Terms of Use</a></li>
+          <li><a href="https://macletics.com/privacy">Privacy Policy</a></li>
+          <li><a href="https://macletics.com/delete-account.html">Delete your account</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>© 2026 Mind of Mart LLC. All rights reserved.</span>
+      <span>Mac's Sports Playground is a sports prediction and analysis platform, not a gambling app.</span>
+    </div>
   </div>
 </footer>
 
