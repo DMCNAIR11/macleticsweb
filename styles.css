@@ -207,7 +207,7 @@ section + section { border-top: 1px solid var(--rule); }
   background: linear-gradient(160deg, #2A3A5C, #121B2E);
   box-shadow: 0 30px 60px -28px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.07) inset;
 }
-.phone img { border-radius: 21px; aspect-ratio: 600 / 1044; object-fit: cover; object-position: top; }
+.phone img { width: 100%; height: auto; border-radius: 21px; aspect-ratio: 600 / 1044; object-fit: cover; object-position: top; }
 .phone.lg { max-width: 290px; border-radius: 34px; padding: 10px; }
 .phone.lg img { border-radius: 25px; }
 
@@ -243,7 +243,7 @@ section + section { border-top: 1px solid var(--rule); }
 .contact-list { list-style: none; display: grid; gap: 0; }
 .contact-list li { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid var(--rule); flex-wrap: wrap; }
 .contact-list li:first-child { border-top: 0; }
-.contact-list a { color: var(--accent); font-weight: 500; text-decoration: none; }
+.contact-list a { color: var(--accent); font-weight: 500; text-decoration: none; overflow-wrap: anywhere; }
 .contact-list a:hover { text-decoration: underline; }
 
 /* ---------- Product page ---------- */
