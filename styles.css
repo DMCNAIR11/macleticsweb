@@ -311,7 +311,7 @@ a.store-btn:not([aria-disabled="true"]):hover { border-color: var(--amber); }
 
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--rule); padding: 56px 0 40px; background: var(--surface); }
-.site-footer .cols { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 32px; }
+.site-footer .cols { display: grid; grid-template-columns: 1.5fr repeat(4, 1fr); gap: 32px; }
 .site-footer h4 { font-family: "IBM Plex Mono", monospace; font-size: .7rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 14px; }
 .site-footer ul { list-style: none; display: grid; gap: 8px; }
 .site-footer a { text-decoration: none; color: var(--ink); font-size: .94rem; }
