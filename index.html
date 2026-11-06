@@ -9,25 +9,45 @@
 <meta property="og:description" content="An independent software studio. Our first release is Mac's Sports Playground, with more products on the way.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mindofmart.com/">
+<meta property="og:image" content="https://mindofmart.com/img/app/dashboard.jpg">
 <link rel="canonical" href="https://mindofmart.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<!--
+  Copy rules (shared with macletics.com): the product is "Mac's Sports
+  Playground" by Macletics, a division of Mind of Mart LLC. Say "picks",
+  "analysis", "prediction"; never "betting", "wager", "sportsbook", and never
+  describe the product as "not a gambling app". No prices. Product numbers
+  and feature detail live on macletics.com only, so they cannot drift here.
+  Future products stay unnamed on this site until the owner says otherwise.
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mind of Mart LLC",
+  "legalName": "Mind of Mart LLC",
+  "url": "https://mindofmart.com/",
+  "logo": "https://mindofmart.com/favicon.svg",
+  "email": "administration@mindofmart.com",
+  "subOrganization": { "@type": "Organization", "name": "Macletics", "url": "https://macletics.com/" }
+}
+</script>
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
     <a class="wordmark" href="/">Mind of Mart <span class="llc">LLC</span></a>
-    <nav aria-label="Main">
-      <ul class="tabs">
-        <li><a href="/" aria-current="page">Studio</a></li>
-        <li><a href="/sports-playground/">Mac's Sports Playground</a></li>
-        <li><a href="/press/">Press &amp; Partners</a></li>
-        <li><a href="/press/#contact">Contact</a></li>
-      </ul>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="/" aria-current="page">Studio</a>
+      <a href="/sports-playground/">Mac's Sports Playground</a>
+      <a href="/press/">Press &amp; Partners</a>
+      <a class="btn btn-primary" href="/press/#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -39,36 +59,21 @@
       <div>
         <p class="eyebrow">Independent software studio</p>
         <h1>Useful apps, built carefully, one at a time.</h1>
-        <p class="lede">Mind of Mart LLC designs and builds consumer software. Our first release is Mac's Sports Playground, a sports prediction and analysis app. More products are on the way.</p>
+        <p class="lede">Mind of Mart LLC designs and builds consumer software. Our first release is Mac's Sports Playground, a sports prediction and analysis app. More products are in development.</p>
         <div class="actions">
           <a class="btn btn-primary" href="/sports-playground/">See Mac's Sports Playground</a>
-          <a class="btn btn-ghost" href="#lineup">Our line-up</a>
+          <a class="btn btn-ghost" href="/press/">Press &amp; Partners</a>
         </div>
       </div>
 
-      <div class="lineup-index" aria-label="Product line-up at a glance">
-        <p class="label">The line-up</p>
-        <a href="/sports-playground/">
-          <span>
-            <span class="name">Mac's Sports Playground</span><br>
-            <span class="sub">Sports prediction &amp; analysis</span>
-          </span>
-          <span class="chip live">Live on Google Play</span>
-        </a>
-        <div class="row">
-          <span>
-            <span class="name">Next product</span><br>
-            <span class="sub">In development</span>
-          </span>
-          <span class="chip">Coming soon</span>
-        </div>
-        <div class="row">
-          <span>
-            <span class="name">And after that</span><br>
-            <span class="sub">On the drawing board</span>
-          </span>
-          <span class="chip">Coming soon</span>
-        </div>
+      <div class="facts-card" aria-label="Company at a glance">
+        <p class="label">At a glance</p>
+        <dl>
+          <div><dt>Company</dt><dd>Mind of Mart LLC, an independent software studio</dd></div>
+          <div><dt>Division</dt><dd>Macletics, our sports division</dd></div>
+          <div><dt>Product</dt><dd><a href="/sports-playground/">Mac's Sports Playground</a> &nbsp;<span class="chip live">Live on Google Play</span></dd></div>
+          <div><dt>Contact</dt><dd><a href="mailto:administration@mindofmart.com">administration@mindofmart.com</a></dd></div>
+        </dl>
       </div>
     </div>
   </section>
@@ -77,59 +82,35 @@
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">Products</p>
-        <h2>The line-up</h2>
-        <p class="muted">Each product gets its own home and its own team focus. Here's what's out and what's next.</p>
+        <h2>What we make</h2>
+        <p class="muted">Each product gets its own home and its own team focus. Here's what's out now.</p>
       </div>
 
-      <div class="lineup">
-        <article class="featured product-panel">
-          <div class="copy">
-            <p class="eyebrow">By Macletics · a Mind of Mart LLC division</p>
-            <h2>Mac's Sports Playground</h2>
-            <p>Build your own pick system and prove it against history. Write the recipe your picks must match, backtest it across past seasons, and let your locker find picks every day. Plus an AI Buddy that knows the numbers.</p>
-            <p>NFL, NBA, MLB, NHL and college, with soccer coming soon.</p>
-            <div class="actions">
-              <a class="btn btn-amber" href="/sports-playground/">Explore the app</a>
-              <a class="btn btn-line" href="https://macletics.com/">Visit macletics.com ↗</a>
-            </div>
+      <article class="product-panel">
+        <div class="copy">
+          <p class="eyebrow">By Macletics · a Mind of Mart LLC division</p>
+          <h2>Mac's Sports Playground</h2>
+          <p>Build your own pick system and prove it against history. Write the recipe your picks must match, backtest it across past seasons, and let your locker find picks every day. Plus an AI Buddy that knows the numbers.</p>
+          <p>NFL, NBA, MLB, NHL, college and soccer.</p>
+          <div class="actions">
+            <a class="btn btn-amber" href="/sports-playground/">About the app</a>
+            <a class="btn btn-line" href="https://macletics.com/">Visit macletics.com ↗</a>
           </div>
-          <div class="shots" aria-hidden="true">
-            <div class="phone"><img src="/img/app/dashboard.jpg" alt="" width="600" height="1044" loading="lazy"></div>
-            <div class="phone"><img src="/img/app/build-rules.jpg" alt="" width="600" height="1044" loading="lazy"></div>
-          </div>
-        </article>
+        </div>
+        <div class="shots" aria-hidden="true">
+          <div class="phone"><img src="/img/app/dashboard.jpg" alt="" width="600" height="1044" loading="lazy"></div>
+          <div class="phone"><img src="/img/app/build-rules.jpg" alt="" width="600" height="1044" loading="lazy"></div>
+        </div>
+      </article>
 
-        <article class="soon-card">
-          <div class="glyph" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-          </div>
-          <span class="chip" style="justify-self:start">Coming soon</span>
-          <h3>Next from the studio</h3>
-          <p>Our second product is in development. We'll share more when it's ready to show.</p>
-        </article>
-
-        <article class="soon-card">
-          <div class="glyph" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-          </div>
-          <span class="chip" style="justify-self:start">Coming soon</span>
-          <h3>More on the way</h3>
-          <p>We're planning further apps for the line-up. Watch this page for launches.</p>
-        </article>
-
-        <article class="soon-card">
-          <div class="glyph" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
-          </div>
-          <h3>Hear about launches first</h3>
-          <p>Email us and we'll let you know when the next product is ready.</p>
-          <a class="btn btn-ghost" style="justify-self:start" href="mailto:hello@mindofmart.com?subject=Mind%20of%20Mart%20launch%20updates">Get launch updates</a>
-        </article>
+      <div class="next-row">
+        <p>More products are in development. We'll announce them here when they're ready to show. To hear first, write to <a href="mailto:marketing@mindofmart.com?subject=Mind%20of%20Mart%20launch%20updates">marketing@mindofmart.com</a>.</p>
+        <span class="chip">In development</span>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="soft rule-top">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">How we work</p>
@@ -164,10 +145,9 @@
       </div>
       <div class="card">
         <ul class="contact-list">
-          <li><span>General inquiries</span><a href="mailto:hello@mindofmart.com">hello@mindofmart.com</a></li>
           <li><span>Help with Mac's Sports Playground</span><a href="mailto:support@macletics.com">support@macletics.com</a></li>
-          <li><span>Press &amp; media</span><a href="mailto:hello@mindofmart.com?subject=Press%20inquiry">hello@mindofmart.com</a></li>
-          <li><span>Partnerships &amp; business</span><a href="mailto:hello@mindofmart.com?subject=Partnership%20inquiry">hello@mindofmart.com</a></li>
+          <li><span>Press &amp; media</span><a href="mailto:marketing@mindofmart.com?subject=Press%20inquiry">marketing@mindofmart.com</a></li>
+          <li><span>Partnerships &amp; business</span><a href="mailto:administration@mindofmart.com?subject=Partnership%20inquiry">administration@mindofmart.com</a></li>
         </ul>
       </div>
     </div>
@@ -186,7 +166,7 @@
         <h4>Products</h4>
         <ul>
           <li><a href="/sports-playground/">Mac's Sports Playground</a></li>
-          <li><a href="/#lineup">Coming soon</a></li>
+          <li><a href="https://macletics.com/">macletics.com ↗</a></li>
           <li><a href="https://macletics.com/support.html">App support ↗</a></li>
         </ul>
       </div>
@@ -194,8 +174,8 @@
         <h4>Company</h4>
         <ul>
           <li><a href="/press/">Press &amp; Partners</a></li>
-          <li><a href="mailto:hello@mindofmart.com">hello@mindofmart.com</a></li>
           <li><a href="/press/#contact">Contact</a></li>
+          <li><a href="mailto:administration@mindofmart.com">administration@mindofmart.com</a></li>
         </ul>
       </div>
       <div>
@@ -218,10 +198,21 @@
     </div>
     <div class="base">
       <span>© 2026 Mind of Mart LLC. All rights reserved.</span>
-      <span>Mac's Sports Playground is a sports prediction and analysis platform.</span>
+      <span>Mac's Sports Playground is a sports prediction and analysis platform. Ages 18+.</span>
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var t = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
+    if (!t || !n) return;
+    t.addEventListener('click', function () {
+      var open = n.classList.toggle('open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
 
 </body>
 </html>
