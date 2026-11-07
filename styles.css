@@ -245,8 +245,10 @@ section.rule-top { border-top: 1px solid var(--rule); }
 .store-btn .small { display: block; font-size: .66rem; letter-spacing: .03em; line-height: 1.15; opacity: .85; }
 .store-btn .big { display: block; font-family: "Sora", sans-serif; font-weight: 600; font-size: 1.02rem; line-height: 1.15; }
 a.store-btn:hover { background: #EEF2F8; border-color: #EEF2F8; }
-.store-btn[aria-disabled="true"] { cursor: default; background: transparent; color: var(--navy-muted); border-color: rgba(255,255,255,.28); }
-.store-btn[aria-disabled="true"] .big { color: #fff; }
+.store-btn.soon { cursor: pointer; background: transparent; color: var(--navy-muted); border-color: rgba(255,255,255,.28); }
+.store-btn.soon .big { color: #fff; }
+button.store-btn { font: inherit; }
+button.store-btn.soon:hover { border-color: #fff; color: #fff; }
 
 .feature-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .feature-list .card h3 { font-size: 1.05rem; }
@@ -277,3 +279,49 @@ a.store-btn:hover { background: #EEF2F8; border-color: #EEF2F8; }
 }
 @media (max-width: 860px) { .site-footer .cols { grid-template-columns: 1fr 1fr; } .site-footer .about { grid-column: 1 / -1; } }
 @media (max-width: 480px) { .site-footer .cols { grid-template-columns: 1fr; } }
+
+/* ---------- Signups: waitlist dialog + inline forms (signup.js) ---------- */
+.signup-dialog {
+  margin: auto; max-height: calc(100vh - 32px); overflow: auto;
+  width: min(460px, calc(100vw - 32px)); border: 1px solid var(--rule); border-radius: 14px;
+  padding: 28px 26px 22px; color: var(--ink); background: var(--bg);
+  box-shadow: 0 24px 60px -20px rgba(14, 22, 38, .45);
+}
+.signup-dialog::backdrop { background: rgba(14, 22, 38, .55); }
+.signup-dialog h2 { font-size: 1.3rem; line-height: 1.25; margin: 0 32px 10px 0; }
+.signup-body { color: var(--ink-soft); font-size: .95rem; margin-bottom: 18px; }
+.signup-close {
+  position: absolute; top: 10px; right: 12px; width: 36px; height: 36px; border: 0; border-radius: 8px;
+  background: transparent; font-size: 1.6rem; line-height: 1; color: var(--ink-faint); cursor: pointer;
+}
+.signup-close:hover { background: var(--bg-soft); color: var(--ink); }
+.signup-label { display: block; font-size: .85rem; font-weight: 500; margin-bottom: 6px; color: var(--ink); }
+.signup-row { display: flex; gap: 10px; }
+.signup-row input {
+  flex: 1; min-width: 0; font: inherit; font-size: 1rem; padding: 11px 14px; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--rule-strong); border-radius: var(--radius-sm);
+}
+.signup-row input:focus { outline: 2px solid var(--navy); outline-offset: 1px; border-color: var(--navy); }
+.signup-row .btn { white-space: nowrap; }
+.signup-trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.signup-status { min-height: 1.2em; margin-top: 10px; font-size: .88rem; color: var(--ink-soft); }
+.signup-status.err { color: #B42318; }
+.signup-status.ok { color: #0F7B4A; font-weight: 500; }
+.signup-fine { margin-top: 6px; font-size: .8rem; color: var(--ink-faint); }
+.signup-fine a, .site-footer .footer-signup p a { color: inherit; font-size: inherit; text-decoration: underline; }
+.signup-done { padding: 6px 0 4px; font-size: 1rem; font-weight: 500; color: #0F7B4A; }
+.signup-inline.is-done .signup-row { display: none; }
+@media (max-width: 480px) { .signup-row { flex-direction: column; } }
+
+.footer-signup {
+  display: grid; grid-template-columns: 1fr minmax(0, 440px); gap: 20px 40px; align-items: center;
+  padding-bottom: 36px; margin-bottom: 40px; border-bottom: 1px solid var(--rule);
+}
+.footer-signup strong { display: block; font-family: "Sora", sans-serif; font-weight: 600; font-size: 1.05rem; color: var(--navy); }
+.footer-signup p { margin-top: 4px; color: var(--ink-soft); font-size: .93rem; max-width: 52ch; }
+@media (max-width: 760px) { .footer-signup { grid-template-columns: 1fr; } }
+
+.link-btn { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
+.glance-note { display: inline-block; margin-top: 6px; font-size: .86rem; color: var(--ink-soft); }
+.glance-note .link-btn { color: var(--accent-text); }
+.next-row .signup-inline { margin-top: 14px; max-width: 460px; }

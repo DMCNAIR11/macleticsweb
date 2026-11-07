@@ -71,7 +71,7 @@
         <dl>
           <div><dt>Company</dt><dd>Mind of Mart LLC, an independent software studio</dd></div>
           <div><dt>Division</dt><dd>Macletics, our sports division</dd></div>
-          <div><dt>Product</dt><dd><a href="/sports-playground/">Mac's Sports Playground</a> &nbsp;<span class="chip live">Live on Google Play</span></dd></div>
+          <div><dt>Product</dt><dd><a href="/sports-playground/">Mac's Sports Playground</a> &nbsp;<span class="chip live">Live on Google Play</span><br><span class="glance-note">On iPhone? <button type="button" class="link-btn" data-signup data-interest="ios_launch" data-source="mindofmart-glance">Get an email when it's on the App Store.</button></span></dd></div>
           <div><dt>Contact</dt><dd><a href="mailto:administration@mindofmart.com">administration@mindofmart.com</a></dd></div>
         </dl>
       </div>
@@ -104,7 +104,17 @@
       </article>
 
       <div class="next-row">
-        <p>More products are in development. We'll announce them here when they're ready to show. To hear first, write to <a href="mailto:marketing@mindofmart.com?subject=Mind%20of%20Mart%20launch%20updates">marketing@mindofmart.com</a>.</p>
+        <div>
+          <p>More products are in development. We'll announce them here when they're ready to show. Leave your email to hear first.</p>
+          <form class="signup-inline" data-signup-form data-interest="updates" data-source="mindofmart-next" novalidate>
+            <div class="signup-row">
+              <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Email address" required>
+              <button type="submit" class="btn btn-primary">Keep me posted</button>
+            </div>
+            <input type="text" name="company" tabindex="-1" autocomplete="off" class="signup-trap" aria-hidden="true">
+            <p class="signup-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
         <span class="chip">In development</span>
       </div>
     </div>
@@ -157,6 +167,20 @@
 
 <footer class="site-footer">
   <div class="wrap">
+    <div class="footer-signup">
+      <div>
+        <strong>Get product updates</strong>
+        <p>Launch news from Mind of Mart and Mac's Sports Playground, including the day it lands on the App Store. Only product news. See our <a href="https://macletics.com/privacy">Privacy Policy</a>.</p>
+      </div>
+      <form class="signup-inline" data-signup-form data-interest="updates" data-source="mindofmart-footer" novalidate>
+        <div class="signup-row">
+          <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Email address" required>
+          <button type="submit" class="btn btn-primary">Sign up</button>
+        </div>
+        <input type="text" name="company" tabindex="-1" autocomplete="off" class="signup-trap" aria-hidden="true">
+        <p class="signup-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
     <div class="cols">
       <div class="about">
         <a class="wordmark" href="/">Mind of Mart <span class="llc">LLC</span></a>
@@ -214,5 +238,6 @@
   })();
 </script>
 
+<script src="/signup.js" defer></script>
 </body>
 </html>
