@@ -87,6 +87,20 @@
 
 <footer class="site-footer">
   <div class="wrap">
+    <div class="footer-signup">
+      <div>
+        <strong>Get product updates</strong>
+        <p>Launch news from Mind of Mart and Mac's Sports Playground, including the day it lands on the App Store. Only product news. See our <a href="https://macletics.com/privacy">Privacy Policy</a>.</p>
+      </div>
+      <form class="signup-inline" data-signup-form data-interest="updates" data-source="mindofmart-footer" novalidate>
+        <div class="signup-row">
+          <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Email address" required>
+          <button type="submit" class="btn btn-primary">Sign up</button>
+        </div>
+        <input type="text" name="company" tabindex="-1" autocomplete="off" class="signup-trap" aria-hidden="true">
+        <p class="signup-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
     <div class="cols">
       <div class="about">
         <a class="wordmark" href="/">Mind of Mart <span class="llc">LLC</span></a>
@@ -144,5 +158,6 @@
   })();
 </script>
 
+<script src="/signup.js" defer></script>
 </body>
 </html>
