@@ -47,80 +47,77 @@
       <a href="/" aria-current="page">Studio</a>
       <a href="/sports-playground/">Mac's Sports Playground</a>
       <a href="/press/">Press &amp; Partners</a>
-      <a class="btn btn-primary" href="/press/#contact">Contact</a>
+      <a class="btn btn-white" href="/press/#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <section class="hero">
+  <section class="showcase on-dark">
     <div class="wrap">
       <div>
         <p class="eyebrow">Independent software studio</p>
         <h1>Useful apps, built carefully, one at a time.</h1>
-        <p class="lede">Mind of Mart LLC designs and builds consumer software. Our first release is Mac's Sports Playground, a sports prediction and analysis app. More products are in development.</p>
+        <p class="lede">Mind of Mart LLC designs and builds consumer software. Our first release is Mac's Sports Playground, a sports prediction and analysis app.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="/sports-playground/">See Mac's Sports Playground</a>
-          <a class="btn btn-ghost" href="/press/">Press &amp; Partners</a>
+          <a class="btn btn-white" href="/sports-playground/">See Mac's Sports Playground</a>
+          <a class="btn btn-line" href="/press/">Press &amp; Partners</a>
         </div>
       </div>
-
-      <div class="facts-card" aria-label="Company at a glance">
-        <p class="label">At a glance</p>
-        <dl>
-          <div><dt>Company</dt><dd>Mind of Mart LLC, an independent software studio</dd></div>
-          <div><dt>Division</dt><dd>Macletics, our sports division</dd></div>
-          <div><dt>Product</dt><dd><a href="/sports-playground/">Mac's Sports Playground</a> &nbsp;<span class="chip live">Live on Google Play</span><br><span class="glance-note">On iPhone? <button type="button" class="link-btn" data-signup data-interest="ios_launch" data-source="mindofmart-glance">Get an email when it's on the App Store.</button></span></dd></div>
-          <div><dt>Contact</dt><dd><a href="mailto:administration@mindofmart.com">administration@mindofmart.com</a></dd></div>
-        </dl>
+      <div class="fan" aria-hidden="true">
+        <div class="device d-left"><img src="/img/app/screens/locker.jpg" alt="" width="640" height="1320"></div>
+        <div class="device d-center"><img src="/img/app/screens/backtest.jpg" alt="" width="640" height="1320"></div>
+        <div class="device d-right"><img src="/img/app/screens/live.jpg" alt="" width="640" height="1320"></div>
       </div>
     </div>
   </section>
 
-  <section id="lineup">
+  <section class="tight">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Products</p>
-        <h2>What we make</h2>
-        <p class="muted">Each product gets its own home and its own team focus. Here's what's out now.</p>
-      </div>
+      <dl class="glance" aria-label="Company at a glance">
+        <div><dt>Company</dt><dd>Mind of Mart LLC, an independent software studio</dd></div>
+        <div><dt>Division</dt><dd>Macletics, our sports division</dd></div>
+        <div><dt>Product</dt><dd><a href="/sports-playground/">Mac's Sports Playground</a> <span class="chip live">Live on Google Play</span><span class="glance-note">On iPhone? <button type="button" class="link-btn" data-signup data-interest="ios_launch" data-source="mindofmart-glance">Get an email when it's on the App Store.</button></span></dd></div>
+        <div><dt>Contact</dt><dd><a href="mailto:administration@mindofmart.com">administration@mindofmart.com</a></dd></div>
+      </dl>
+    </div>
+  </section>
 
-      <article class="product-panel">
+  <section id="lineup" class="soft">
+    <div class="wrap">
+      <div class="row">
         <div class="copy">
-          <p class="eyebrow">By Macletics · a Mind of Mart LLC division</p>
+          <p class="eyebrow">What we make · By Macletics</p>
           <h2>Mac's Sports Playground</h2>
           <p>Build your own pick system and prove it against history. Write the recipe your picks must match, backtest it across past seasons, and let your locker find picks every day. Plus an AI Buddy that knows the numbers.</p>
           <p>NFL, NBA, MLB, NHL, college and soccer.</p>
           <div class="actions">
-            <a class="btn btn-amber" href="/sports-playground/">About the app</a>
-            <a class="btn btn-line" href="https://macletics.com/">Visit macletics.com ↗</a>
+            <a class="btn btn-primary" href="/sports-playground/">About the app</a>
+            <a class="btn btn-ghost" href="https://macletics.com/app/">Get the app ↗</a>
           </div>
         </div>
-        <div class="shots" aria-hidden="true">
-          <div class="phone"><img src="/img/app/build-rules.jpg" alt="" width="600" height="1044" loading="lazy"></div>
-          <div class="phone"><img src="/img/app/backtest.jpg" alt="" width="600" height="1044" loading="lazy"></div>
-        </div>
-      </article>
+        <div class="device shot"><img src="/img/app/screens/dashboard.jpg" alt="The Mac's Sports Playground dashboard: quick actions, your teams and your games" width="640" height="1320" loading="lazy"></div>
+      </div>
 
       <div class="next-row">
         <div>
-          <p>More products are in development. We'll announce them here when they're ready to show. Leave your email to hear first.</p>
-          <form class="signup-inline" data-signup-form data-interest="updates" data-source="mindofmart-next" novalidate>
-            <div class="signup-row">
-              <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Email address" required>
-              <button type="submit" class="btn btn-primary">Keep me posted</button>
-            </div>
-            <input type="text" name="company" tabindex="-1" autocomplete="off" class="signup-trap" aria-hidden="true">
-            <p class="signup-status" role="status" aria-live="polite"></p>
-          </form>
+          <h3>More products are in development</h3>
+          <p>We'll announce them here when they're ready to show. Leave your email to hear first.</p>
         </div>
-        <span class="chip">In development</span>
+        <form class="signup-inline" data-signup-form data-interest="updates" data-source="mindofmart-next" novalidate>
+          <div class="signup-row">
+            <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Email address" required>
+            <button type="submit" class="btn btn-primary">Keep me posted</button>
+          </div>
+          <input type="text" name="company" tabindex="-1" autocomplete="off" class="signup-trap" aria-hidden="true">
+          <p class="signup-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
 
-  <section class="soft rule-top">
+  <section>
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow">How we work</p>
@@ -143,7 +140,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="soft">
     <div class="wrap split">
       <div class="section-head" style="margin-bottom:0">
         <p class="eyebrow">Press &amp; partners</p>
@@ -153,13 +150,11 @@
           <a class="btn btn-primary" href="/press/">Press &amp; Partners</a>
         </div>
       </div>
-      <div class="card">
-        <ul class="contact-list">
-          <li><span>Help with Mac's Sports Playground</span><a href="mailto:support@macletics.com">support@macletics.com</a></li>
-          <li><span>Press &amp; media</span><a href="mailto:marketing@mindofmart.com?subject=Press%20inquiry">marketing@mindofmart.com</a></li>
-          <li><span>Partnerships &amp; business</span><a href="mailto:administration@mindofmart.com?subject=Partnership%20inquiry">administration@mindofmart.com</a></li>
-        </ul>
-      </div>
+      <ul class="contact-list">
+        <li><span>Help with Mac's Sports Playground</span><a href="mailto:support@macletics.com">support@macletics.com</a></li>
+        <li><span>Press &amp; media</span><a href="mailto:marketing@mindofmart.com?subject=Press%20inquiry">marketing@mindofmart.com</a></li>
+        <li><span>Partnerships &amp; business</span><a href="mailto:administration@mindofmart.com?subject=Partnership%20inquiry">administration@mindofmart.com</a></li>
+      </ul>
     </div>
   </section>
 
